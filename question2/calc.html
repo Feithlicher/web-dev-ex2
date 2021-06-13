@@ -11,27 +11,55 @@
 <body>
     <h1>Welcome to my Calculator page!</h1>
     <div id="topContainerDiv">
+        
         <div id="startButtonDiv">
             <button id="startButton">Press Here to Start</button>
         </div>
+        
+        <div>
+            <input id="inputField" type="text">
+        </div>
+        
         <div id="currentValueDiv">
             Calc :)
         </div>
+    
     </div>
 
-    <div class="container">
-        <div id="addButtonDiv">
-            <button id="addButton">+</button>
+
+
+
+    <div class="operatorsContainer">
+    
+        <div class="container">
+            <div id="addButtonDiv">
+                <button id="addButton"  class="operationButton">+</button>
+            </div>
+            <div id="subButtonDiv">
+                <button id="subButton"  class="operationButton">-</button>
+            </div>
         </div>
-        <div id="subButtonDiv">
-            <button id="addButton">+</button>
+
+        <div class="container">
+            <div id="multButtonDiv">
+                <button id="multButton"  class="operationButton">X</button>
+            </div>
+            <div id="divButtonDiv">
+                <button id="divButton"  class="operationButton">%</button>
+            </div>
         </div>
-        <div id="multButtonDiv">
-            <button id="addButton">+</button>
+
+        <div class="container">
+            <div id="clearButtonDiv">
+                <button id="clearButton"  class="operationButton">clear</button>
+            </div>
+            <div id="equalsButtonDiv">
+                <button id="equalsButton"  class="operationButton">=</button>
+            </div>
         </div>
-        <div id="divButtonDiv">
-            <button id="addButton">+</button>
-        </div>
+
     </div>
+    
+
 </body>
 </html>

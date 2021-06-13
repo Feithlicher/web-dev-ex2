@@ -19,7 +19,7 @@ app.post('/start', (req, res) => {
 app.post('/calc/add/:num', (req, res) => {
     const num = parseInt(req.params.num)
     M += num
-    res.send("(add) new M is: " + M)
+    res.send("new M = " + toString(M))
 })
 
 

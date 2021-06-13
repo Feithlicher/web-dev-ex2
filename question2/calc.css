@@ -22,31 +22,61 @@ h1 {
     padding-right: 4%;
     padding-bottom: 0.5%;
     padding-left: 4%;
+    border-radius: 15px;
 }
 
 #startButtonDiv {
     margin-top: 3%;
 }
 
-#addButtonDiv {
-    margin-top: 5%;
-    margin-right: 5%;
-    margin-left: 0%
-}
-
 .container {
+    position: relative;
+    display: flex;
     margin-left: 40%;
+    margin-bottom: 3%;
 }
 
+.operationButton {
+    font-size:  large;
+    cursor: pointer;
+    background-color: green;
+    border-radius: 15px;
+    padding: 12px 20px;
+}
 
+.operationButton:hover {
+    background-color: greenyellow;
+}
 
+.operatorsContainer {
+    margin-left: 10%;
+    margin-top: 5%;
+}
 
+#subButton {
+    margin-left: 100%;
+}
 
+#divButton {
+    margin-left: 100%;
+}
 
+#equalsButton {
+    margin-left: 100%;
+}
 
+#startButton {
+    font-size:  medium;
+    cursor: pointer;
+    background-color: pink;
+    border-radius: 15px;
+    padding: 12px 20px;
+    margin-left: 0%;
+}
 
-
-
+#startButton:hover {
+    background-color: hotpink;
+}
 
 
 
