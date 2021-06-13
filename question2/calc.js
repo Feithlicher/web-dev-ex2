@@ -11,8 +11,8 @@ app.get('/', (req, res) => {
 let M = 0
 // <POST> /start zerofiy the shared variable M (M = 0)
 app.post('/start', (req, res) => {
-    // let M = 0
-    res.send("(start) M value is: " + M)
+    M = 0
+    res.send("M = 0")
 })
 
 // <POST> /calc/add/:num sets M+= :num . It returns the new M

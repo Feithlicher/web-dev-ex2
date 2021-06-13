@@ -6,12 +6,12 @@ h1 {
     text-align: center;
 }
 
-#mainDiv{
+#topContainerDiv{
     position: relative;
     display: flex;
 }
 
-#currentValue {
+#currentValueDiv {
     text-align: center;
     font-size: xx-large;
     background-color: green;
@@ -24,6 +24,41 @@ h1 {
     padding-left: 4%;
 }
 
-#buttonDiv {
+#startButtonDiv {
     margin-top: 3%;
 }
+
+#addButtonDiv {
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 0%
+}
+
+.container {
+    margin-left: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
