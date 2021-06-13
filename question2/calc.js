@@ -56,11 +56,8 @@ app.post('/calc/reset', (req, res) => {
     res.send("(reset) new M is: " + M)
 })
 
-
-
-
-
+module.exports = app
 
 
 // listen on a port
-app.listen(5000, () => console.log("Server started on port 5000"));
+// app.listen(5000, () => console.log("Server started on port 5000"));

@@ -2,9 +2,9 @@
   "name": "question2",
   "version": "1.0.0",
   "description": "",
-  "main": "calc.js",
+  "main": "webServer.js",
   "scripts": {
-    "start": "node calc",
+    "start": "node webServer",
     "dev": "nodemon index"
   },
   "keywords": [],

@@ -1,0 +1,29 @@
+body {
+    background-color:burlywood
+}
+
+h1 {
+    text-align: center;
+}
+
+#mainDiv{
+    position: relative;
+    display: flex;
+}
+
+#currentValue {
+    text-align: center;
+    font-size: xx-large;
+    background-color: green;
+    border-style: solid;
+    margin-left: 36%;
+    margin-top: 3%;
+    padding-top: 0.5%;
+    padding-right: 4%;
+    padding-bottom: 0.5%;
+    padding-left: 4%;
+}
+
+#buttonDiv {
+    margin-top: 3%;
+}
