@@ -19,41 +19,41 @@ app.post('/start', (req, res) => {
 app.post('/calc/add/:num', (req, res) => {
     const num = parseInt(req.params.num)
     M += num
-    res.send("new M = " + toString(M))
+    res.send(M.toString())
 })
 
 
 // <POST> /calc/sub/:num sets M -= :num. It returns the new M
 app.post('/calc/sub/:num', (req, res) => {
-    const num = parseInt(req.params.num)
-    M -= num
-    res.send("(sub) new M is: " + M)
+    const num = parseInt(req.params.num);
+    M -= num;
+    res.send(M.toString());
 })
 
 // <PUT> /calc/multiply/:num sets M=:num * M. it returns the new M
 app.put("/calc/multiply/:num", (req, res) => {
-    const num = parseInt(req.params.num)
-    M *= num
-    res.send("(mult) new M is: " + M)
+    const num = parseInt(req.params.num);
+    M *= num;
+    res.send(M.toString());
 })
 
 // <PUT> /calc/divide/:num sets M=M/:num. It returns the new M
 app.put("/calc/divide/:num", (req, res) => {
     const num = parseInt(req.params.num)
     M /= num
-    res.send("(div) new M is: " + M)
+    res.send(M.toString())
 })
 
 
 // <GET> /calc/M returns M
 app.get('/calc/M', (req, res) => {
-    res.send("current M value is: " + M)
+    res.send(M.toString())
 })
 
 // <POST> /calc/reset sets M=0 and returns 0
 app.post('/calc/reset', (req, res) => {
     M = 0
-    res.send("(reset) new M is: " + M)
+    res.send(M.toString())
 })
 
 module.exports = app

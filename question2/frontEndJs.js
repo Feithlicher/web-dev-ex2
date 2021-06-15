@@ -20,21 +20,86 @@ window.addEventListener('load', (loadEvent) => {
     // Add button Functionality
     const addButton = document.getElementById("addButton");
     addButton.addEventListener('click', async (clickEvent) => {
-        const inputFieldValue = document.getElementById("inputField");
-        console.log("add button has been clicked");
+        const inputFieldValue = document.getElementById("inputField").value;
+        console.log("add button has been clicked and inputFieldValue=" + inputFieldValue);
         let response = await fetch(`http://localhost:5000/calc/add/${inputFieldValue}`, {method: 'POST'});
         if(response.ok){
             let val = await response.text();
             console.log("the val is: " + val);
-            val = parseInt(val);
             currentValue.innerHTML = val;
         }else{
             alert("HTTP-Error: " + response.status);
         }
     })
 
+    // Sub Button Functionality
+    const subButton = document.getElementById("subButton");
+    subButton.addEventListener('click', async (clickEvent) => {
+        const inputFieldValue = document.getElementById("inputField").value;
+        let response = await fetch(`http://localhost:5000/calc/sub/${inputFieldValue}`, {method: 'POST'});
+        if(response.ok){
+            let val = await response.text();
+            console.log("the val is: " + val);
+            currentValue.innerHTML = val;
+        }else{
+            alert("HTTP-Error: " + response.status);
+        }
+    })
 
+    // Mult Button Functionality
+    const multButton = document.getElementById("multButton");
+    multButton.addEventListener('click', async (clickEvent) => {
+        const inputFieldValue = document.getElementById("inputField").value;
+        let response = await fetch(`http://localhost:5000/calc/multiply/${inputFieldValue}`, {method: 'PUT'});
+        if(response.ok){
+            let val = await response.text();
+            console.log("the val is: " + val);
+            currentValue.innerHTML = val;
+        }else{
+            alert("HTTP-Error: " + response.status);
+        }
+    })
 
+    // Divide Button Functionality
+    const divideButton = document.getElementById("divButton");
+    divideButton.addEventListener('click', async (clickEvent) => {
+        const inputFieldValue = document.getElementById("inputField").value;
+        let response = await fetch(`http://localhost:5000/calc/divide/${inputFieldValue}`, {method: 'PUT'});
+        if(response.ok){
+            let val = await response.text();
+            console.log("the val is: " + val);
+            currentValue.innerHTML = val;
+        }else{
+            alert("HTTP-Error: " + response.status);
+        }
+    })
 
+    // Clear Button Functionality
+    const clearButton = document.getElementById("clearButton");
+    clearButton.addEventListener('click', async (clickEvent) => {
+        document.getElementById("inputField").value = 0;
+        let response = await fetch(`http://localhost:5000/calc/reset`, {method: 'POST'});
+        if(response.ok){
+            let val = await response.text();
+            console.log("the val is: " + val);
+            currentValue.innerHTML = val;
+        }else{
+            alert("HTTP-Error: " + response.status);
+        }
+    })
+    
+    // Equals Button Functionality
+    const equalsButton = document.getElementById("equalsButton");
+    equalsButton.addEventListener('click', async (clickEvent) => {
+        let response = await fetch(`http://localhost:5000/calc/M`, {method: 'GET'});
+        if(response.ok){
+            let val = await response.text();
+            console.log("the val is: " + val);
+            currentValue.innerHTML = val;
+            document.getElementById("inputField").value = val;
+        }else{
+            alert("HTTP-Error: " + response.status);
+        }
+    })
 
 })
