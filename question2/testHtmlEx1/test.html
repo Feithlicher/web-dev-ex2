@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+        <link rel="stylesheet" href="test.css">
+    </head>
+    
+    <body>
+        <h1 id="welcome" class="heading">Welcome to learn.js test page!</h1>
+        <div class="mainDiv">
+            
+            <div class="singleTestDiv">
+                <u>learn.js test</u>
+                <a href="qSyntaxTest.html">click here</a>
+            </div>
+
+            <hr>
+            
+            <div class="singleTestDiv">
+                <u>qObj test</u><br>
+                <div id="literal" class="objects"><b>object literal:</b> </div>
+                <div id="literalProto" class="proto">__proto__:</div>
+                <div id="Constructor" class="objects"><b>Constructor:</b> </div>
+                <div id="ConstructorProto" class="proto">__proto__:</div>
+                <div id="Object.create" class="objects"><b>Object.create: </b></div>
+                <div id="Object.createProto" class="proto">__proto__:</div>
+                <div id="Object Factory" class="objects"><b>Object Factory:</b> </div>
+                <div id="Object FactoryProto" class="proto">__proto__:</div>
+                <div id="JavaScript Class" class="objects"><b>JavaScript Class:</b> </div>
+                <div id="JavaScript ClassProto" class="proto">__proto__:</div>
+            </div>
+            
+            <hr>
+            
+            <div class="singleTestDiv">
+                <u>qCalc test</u>
+                <div>
+                    <span class="currVal">Current Value = </span>
+                    <span id="numberValue">0</span>
+                </div>
+                <div>
+                    <input type="text" size="10" id="arg" placeholder="Argument">
+                </div>
+                <div>
+                    <button onclick="addFunc()">+</button>
+                    <button onclick="subFunc()">-</button>
+                </div>
+
+            </div>
+            
+            <hr>
+            
+            <div id="aSyncDiv" class="singleTestDiv">
+                <u>qAsync test</u>
+                <button onclick="testAsyncFunc()">test</button>
+            </div>
+        
+        </div>
+    </body>
+    
+    <script src="learn.js"></script>
+    <script src="test.js"></script>
+</html>

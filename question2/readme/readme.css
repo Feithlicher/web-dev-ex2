@@ -1,0 +1,31 @@
+.cred{
+font-size: 200%;
+}
+
+.cred2{
+    font-size: 200%;
+    margin-left: 1%;
+}
+.cred3{
+    font-size: 200%;
+    margin-left: 7%;
+}
+
+.contactMePicDiv img {
+    height: 100%;
+    width: 100%;
+}
+
+.contactMePicDiv{
+    height: 5%;
+    width: 20%;
+    margin-left: 15%;
+}
+
+.mainPicsDiv{
+    display: flex;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }

@@ -1,0 +1,31 @@
+body {
+    background-color:dimgrey;
+}
+
+.heading {
+    color: blue;
+    text-align: center;
+
+}
+
+.mainDiv {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnDiv {
+    /* margin-top: 1.5%; */
+    margin-left: 2%;
+}
+
+.redClass{
+    font-size: 200%;
+    color:yellow;
+}
+
+.greenClass{
+    font-size: 200%;
+    color:darkgreen;
+}
+

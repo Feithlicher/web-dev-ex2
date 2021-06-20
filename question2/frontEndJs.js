@@ -22,13 +22,20 @@ window.addEventListener('load', (loadEvent) => {
     addButton.addEventListener('click', async (clickEvent) => {
         const inputFieldValue = document.getElementById("inputField").value;
         console.log("add button has been clicked and inputFieldValue=" + inputFieldValue);
-        let response = await fetch(`http://localhost:5000/calc/add/${inputFieldValue}`, {method: 'POST'});
-        if(response.ok){
-            let val = await response.text();
-            console.log("the val is: " + val);
-            currentValue.innerHTML = val;
+        if(inputFieldValue.trim()){
+            let response = await fetch(`http://localhost:5000/calc/add/${inputFieldValue}`, {method: 'POST'});
+            if(response.ok){
+                console.log("response is: " + response)
+                let val = await response.text();
+                console.log("the val is: " + val);
+                currentValue.innerHTML = val;
+            }else{
+                let val = await response.text();
+                alert("HTTP-Error: " + response.status);
+                console.log("the val is: " + val);
+            }
         }else{
-            alert("HTTP-Error: " + response.status);
+            alert("Please insert a valid input :)");
         }
     })
 
@@ -36,13 +43,17 @@ window.addEventListener('load', (loadEvent) => {
     const subButton = document.getElementById("subButton");
     subButton.addEventListener('click', async (clickEvent) => {
         const inputFieldValue = document.getElementById("inputField").value;
-        let response = await fetch(`http://localhost:5000/calc/sub/${inputFieldValue}`, {method: 'POST'});
-        if(response.ok){
-            let val = await response.text();
-            console.log("the val is: " + val);
-            currentValue.innerHTML = val;
+        if(inputFieldValue.trim()){
+            let response = await fetch(`http://localhost:5000/calc/sub/${inputFieldValue}`, {method: 'POST'});
+            if(response.ok){
+                let val = await response.text();
+                console.log("the val is: " + val);
+                currentValue.innerHTML = val;
+            }else{
+                alert("HTTP-Error: " + response.status);
+            }
         }else{
-            alert("HTTP-Error: " + response.status);
+            alert("Please insert a valid input :)");
         }
     })
 
@@ -50,13 +61,17 @@ window.addEventListener('load', (loadEvent) => {
     const multButton = document.getElementById("multButton");
     multButton.addEventListener('click', async (clickEvent) => {
         const inputFieldValue = document.getElementById("inputField").value;
-        let response = await fetch(`http://localhost:5000/calc/multiply/${inputFieldValue}`, {method: 'PUT'});
-        if(response.ok){
-            let val = await response.text();
-            console.log("the val is: " + val);
-            currentValue.innerHTML = val;
+        if(inputFieldValue.trim()){
+            let response = await fetch(`http://localhost:5000/calc/multiply/${inputFieldValue}`, {method: 'PUT'});
+            if(response.ok){
+                let val = await response.text();
+                console.log("the val is: " + val);
+                currentValue.innerHTML = val;
+            }else{
+                alert("HTTP-Error: " + response.status);
+            }
         }else{
-            alert("HTTP-Error: " + response.status);
+            alert("Please insert a valid input :)");
         }
     })
 
@@ -64,13 +79,17 @@ window.addEventListener('load', (loadEvent) => {
     const divideButton = document.getElementById("divButton");
     divideButton.addEventListener('click', async (clickEvent) => {
         const inputFieldValue = document.getElementById("inputField").value;
-        let response = await fetch(`http://localhost:5000/calc/divide/${inputFieldValue}`, {method: 'PUT'});
-        if(response.ok){
-            let val = await response.text();
-            console.log("the val is: " + val);
-            currentValue.innerHTML = val;
+        if(inputFieldValue.trim()){
+            let response = await fetch(`http://localhost:5000/calc/divide/${inputFieldValue}`, {method: 'PUT'});
+            if(response.ok){
+                let val = await response.text();
+                console.log("the val is: " + val);
+                currentValue.innerHTML = val;
+            }else{
+                alert("HTTP-Error: " + response.status);
+            }
         }else{
-            alert("HTTP-Error: " + response.status);
+            alert("Please insert a valid input :)");
         }
     })
 

@@ -1,0 +1,35 @@
+body {
+    background-color:dimgrey;
+}
+
+.heading {
+    color: blue;
+    text-align: center;
+}
+
+.mainDiv {
+    display: flex;
+}
+
+.objects {
+    font-size: x-large;
+    margin-top: 7%;
+}
+
+.proto {
+    color:salmon;
+    font-size: x-large;
+}
+
+.singleTestDiv {
+    font-size: xx-large;
+    margin: 7.5%;
+}
+
+.inputClass {
+    width: 10%;
+}
+
+.currVal {
+    font-size: x-large;
+}

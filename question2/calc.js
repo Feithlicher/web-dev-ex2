@@ -3,10 +3,6 @@ const express = require('express');
 // init express
 const app = express()
 
-// my test
-app.get('/', (req, res) => {
-    res.send("hey nate!")
-})
 
 let M = 0
 // <POST> /start zerofiy the shared variable M (M = 0)
@@ -17,31 +13,51 @@ app.post('/start', (req, res) => {
 
 // <POST> /calc/add/:num sets M+= :num . It returns the new M
 app.post('/calc/add/:num', (req, res) => {
-    const num = parseInt(req.params.num)
-    M += num
-    res.send(M.toString())
+    if(!isNaN(req.params.num)){
+        const num = parseFloat(req.params.num)
+        M += num
+        res.send(M.toString())
+    }else{
+        res.status(500);
+        res.send("error! http status: 500");
+    }
 })
 
 
 // <POST> /calc/sub/:num sets M -= :num. It returns the new M
 app.post('/calc/sub/:num', (req, res) => {
-    const num = parseInt(req.params.num);
-    M -= num;
-    res.send(M.toString());
+    if(!isNaN(req.params.num)){
+        const num = parseFloat(req.params.num);
+        M -= num;
+        res.send(M.toString());
+    }else{
+        res.status(500);
+        res.send("error! http status: 500");
+    }
 })
 
 // <PUT> /calc/multiply/:num sets M=:num * M. it returns the new M
 app.put("/calc/multiply/:num", (req, res) => {
-    const num = parseInt(req.params.num);
-    M *= num;
-    res.send(M.toString());
+    if(!isNaN(req.params.num)){
+        const num = parseFloat(req.params.num);
+        M *= num;
+        res.send(M.toString());
+    }else{
+        res.status(500);
+        res.send("error! http status: 500");
+    }
 })
 
 // <PUT> /calc/divide/:num sets M=M/:num. It returns the new M
 app.put("/calc/divide/:num", (req, res) => {
-    const num = parseInt(req.params.num)
-    M /= num
-    res.send(M.toString())
+    if((parseInt(req.params.num) === 0) || isNaN(req.params.num)){
+        res.status(500);
+        res.send("error! http status: 500");
+    }else{
+        const num = parseFloat(req.params.num)
+        M /= num
+        res.send(M.toString())
+    }
 })
 
 
@@ -56,8 +72,4 @@ app.post('/calc/reset', (req, res) => {
     res.send(M.toString())
 })
 
-module.exports = app
-
-
-// listen on a port
-// app.listen(5000, () => console.log("Server started on port 5000"));
+module.exports = app;
